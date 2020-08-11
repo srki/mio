@@ -116,7 +116,7 @@ int mio_read_tuples_##NAME(const char *path, int *nrows_out, int *ncols_out,    
     /* Write out values */                                                              \
     *nrows_out = nrows;                                                                 \
     *ncols_out = ncols;                                                                 \
-    *nz_out = nz * (symmetric ? 2 : 1);                                                 \
+    *nz_out = nz;                                                                       \
     *I_out = I;                                                                         \
     *J_out = J;                                                                         \
     *X_out = X;                                                                         \
