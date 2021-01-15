@@ -66,6 +66,7 @@ int mio_read_tuples_##NAME(const char *path, int *nrows_out, int *ncols_out,    
         free(I);                                                                        \
         free(J);                                                                        \
         free(X);                                                                        \
+        fprintf(stderr, "Out of memory.");                                              \
         return 5;                                                                       \
     }                                                                                   \
                                                                                         \
