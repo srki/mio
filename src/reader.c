@@ -97,6 +97,7 @@ int mio_read_tuples_##NAME(const char *path, int *nrows_out, int *ncols_out,    
             X[i] = 1;                                                                   \
             if (symmetric) { X[i + nz] = 1; }                                           \
         }                                                                               \
+        char *pc_unused = fgets(line, MM_MAX_LINE_LENGTH, f);                           \
     }                                                                                   \
                                                                                         \
     if (symmetric) { nz *= 2; }                                                         \
