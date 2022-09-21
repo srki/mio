@@ -5,4 +5,7 @@ set(CMAKE_C_STANDARD 99)
 
 add_subdirectory(external)
 add_subdirectory(src)
-add_subdirectory(test)
+
+if (DEV)
+    add_subdirectory(test)
+endif ()
